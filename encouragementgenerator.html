@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #bca0bc;
+}
+
+/* Style the header */
+.header {
+  background-color: #bca0bc;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+button {
+    background-color: #c079c0;
+    color: #3b3165;
+    border: 2px solid #3b3165;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 125px;
+    height: 100px;
+    font-size: 20px;
+    border-radius: 8%;
+    }
+    button:hover, button:active {
+        background-color: #3b3165;
+        color: #bca0bc;
+        }
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #c079c0;
+  font-family: sans-serif;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #3b3561;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #3b3561;
+  color: #bca0bc;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+  font-family: sans-serif;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+  font-family: sans-serif;
+}
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: #c079c0;
+    color: #3b3165;
+    border: 2px solid #3b3161;
+    padding: 2%;
+    border-radius: 8px;
+}
+p1 {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+img {
+    width: 65%;
+    height:auto;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Encouragement Generator</h1>
+  <p1>Feeling down? Having Trouble working? Have no fear, for the encouragement generator is here!</p1>
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="https://www.youtube.com/watch?v=wGdodz6ck7g&t=5170s">Calming Work/Study Music</a>
+  <a href="#">Link</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2><button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,25)">Click Me</button></h2>
+    <img src="tiny_man_holding_a_wrench-removebg-preview.png">
+  </div>
+  
+  <div class="column middle">
+    <h2>Encouragement will be shown bellow</h2>
+    <p id="demo"></p>
+  </div>
+  
+  <div class="column side">
+    <h2>Still Feeling Down?</h2>
+    <p>Consider going outside, reading a book, eating a healthy meal, or anything else that makes you happy</p>
+    <img src="tiny_man_holding_question_mark-removebg-preview.png">
+  </div>
+</div>
+<script>
+    function getRndInteger(min, max) {
+      var num = Math.floor(Math.random() * (max - min + 1) ) + min;
+      if (num == 1) {
+        return "Success is not final; failure is not fatal: It is the courage to continue that counts. — Winston S. Churchill";
+      }  
+      if (num == 2) {
+        return "It is better to fail in originality than to succeed in imitation. — Herman Melville";
+      }
+      if (num == 3) {
+        return "The road to success and the road to failure are almost exactly the same. — Colin R. Davis";
+      }
+      if (num == 4) {
+        return "Success usually comes to those who are too busy looking for it.” — Henry David Thoreau";
+      }
+      if (num == 5) {
+        return "Develop success from failures. Discouragement and failure are two of the surest stepping stones to success. —Dale Carnegie";
+      }
+      if (num == 6) {
+        return "Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. The slogan 'Press On' has solved and always will solve the problems of the human race. —Calvin Coolidge";
+      }
+      if (num == 7) {
+        return "There are three ways to ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.” —Mister Rogers";
+      }
+      if (num == 8) {
+        return "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.” —John Wooden";
+      }
+      if (num == 9) {
+        return "“I never dreamed about success. I worked for it.” —Estée Lauder"
+      }
+      if (num == 10) {
+        return "Success is getting what you want, happiness is wanting what you get.” ―W. P. Kinsella";
+      }
+      if (num == 11) {
+        return "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty. — Winston Churchill";
+      }
+      if (num == 12) {
+        return "“Don't let yesterday take up too much of today. — Will Rogers";
+      }
+      if (num == 13) {
+        return "If you are working on something that you really care about, you don't have to be pushed. The vision pulls you. — Steve Jobs";
+      }
+      if (num == 14) {
+        return "Experience is a hard teacher because she gives the test first, the lesson afterwards. ―Vernon Sanders Law";
+      }
+      if (num == 15) {
+        return "To know how much there is to know is the beginning of learning to live. —Dorothy West";
+      }
+      if (num == 16) {
+        return "Concentrate all your thoughts upon the work in hand. The sun's rays do not burn until brought to a focus. — Alexander Graham Bell";
+      }
+      if (num == 17) {
+        return "Either you run the day or the day runs you. — Jim Rohn";
+      }
+      if (num == 18) {
+        return "I'm a greater believer in luck, and I find the harder I work the more I have of it. — Thomas Jefferson";
+      }
+      if (num == 19) {
+        return "When we strive to become better than we are, everything around us becomes better too. — Paulo Coelho";
+      }
+      if (num == 20) {
+        return "Opportunity is missed by most people because it is dressed in overalls and looks like work. — Thomas Edison";
+      }
+      if (num == 21) {
+        return "Setting goals is the first step in turning the invisible into the visible. — Tony Robbins";
+      }
+      if (num == 22) {
+        return "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. — Steve Jobs";
+      }
+      if (num == 23) {
+        return "Talent wins games, but teamwork and intelligence win championships. — Michael Jordan";
+      }
+      if (num == 24) {
+        return "Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilisation work.” — Vince Lombardi";
+      }
+      if (num == 25) {
+        return "Coming together is a beginning. Keeping together is progress. Working together is success. — Henry Ford";
+      }
+    }
+    </script>
+    
+</body>
+</html>
